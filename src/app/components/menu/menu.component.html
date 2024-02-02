@@ -1,0 +1,16 @@
+<div class="container d-flex justify-content-center align-items-center vh-100">
+  <div class="card" style="width: 800px; height: 500px; background-color: brown; color: white;">
+    <div class="card-header">
+      <h4 class="card-title">PokeCardéx</h4>
+    </div>
+    <div class="card-body d-flex flex-column justify-content-center align-items-center">
+      <p class="card-text mb-4">Seja bem-vindo ao Poke Card. Aqui você pode montar seu baralho.</p>
+      <button type="button" class="btn btn-primary mb-2" (click)="mountDecks()">Montar baralho</button>
+      <button type="button" class="btn btn-secondary mb-2" >Meus baralhos</button>
+      <button type="button" class="btn btn-success mb-2" (click)="viewPokes()">Pokemons</button>
+    </div>
+    <div>
+      <img [src]="imagePath" alt="Imagem no rodapé" class="img-fluid" />
+    </div>
+  </div>
+</div>

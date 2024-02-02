@@ -1,0 +1,16 @@
+<div class="card-header" style="color: white;">
+  <h4 class="card-title">PokeCardéx</h4>
+  <p class="card-text mb-4">Seja bem-vindo ao Poke Card. Aqui você pode montar seu baralho.</p>
+</div>
+
+<div class="container" style="float: right; max-width: 500px;">
+  <div class="card custom-scrollbar" style="float: right; max-width: 500px; max-height: 650px; overflow: auto;">
+    <app-deck-list (showDetails)="showDeckDetails($event)"></app-deck-list>
+  </div>
+</div>
+
+<div class="container" style="float: left; max-width: 550px;" *ngIf="selectedDeckId">
+  <div class="card">
+    <app-deck-details *ngIf="selectedDeckId" [deckId]="selectedDeckId" (closeDetails)="closeDeckDetails()"></app-deck-details>
+  </div>
+</div>

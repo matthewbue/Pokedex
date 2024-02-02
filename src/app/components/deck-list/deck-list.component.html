@@ -1,0 +1,9 @@
+<!-- deck-list.component.html -->
+<div class="styled-container">
+  <div *ngFor="let deck of decks.cards" class="deck-card">
+    <div class="card-info">
+      <h5>{{ deck.name }}</h5>
+      <img src="{{ deck.imageUrl }}" (click)="navigateToDeckDetails(deck.id)" alt="" class="img-fluid hover-effect" style="max-width: 200px; max-height: 200px;">
+    </div>
+  </div>
+</div>

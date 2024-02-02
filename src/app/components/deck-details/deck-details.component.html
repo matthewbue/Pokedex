@@ -1,0 +1,52 @@
+<!-- deck-details.component.html -->
+<div *ngIf="deckDetails" class="container mt-4">
+  <h2 class="mb-3">{{ deckDetails.card.name }}</h2>
+
+  <div class="row">
+    <div class="col-md-6">
+      <img [src]="deckDetails.card.imageUrl" alt="{{ deckDetails.card.name }}" class="img-fluid mb-3" />
+    </div>
+    <div class="col-md-6">
+      <table class="table">
+        <tbody>
+          <tr>
+            <th>ID</th>
+            <td>{{ deckDetails.card.id }}</td>
+          </tr>
+          <tr>
+            <th>Supertype</th>
+            <td>{{ deckDetails.card.supertype }}</td>
+          </tr>
+          <tr>
+            <th>Number</th>
+            <td>{{ deckDetails.card.number }}</td>
+          </tr>
+          <tr>
+            <th>Artist</th>
+            <td>{{ deckDetails.card.artist }}</td>
+          </tr>
+          <tr>
+            <th>Rarity</th>
+            <td>{{ deckDetails.card.rarity }}</td>
+          </tr>
+          <tr>
+            <th>Series</th>
+            <td>{{ deckDetails.card.series }}</td>
+          </tr>
+          <tr>
+            <th>Set</th>
+            <td>{{ deckDetails.card.set }}</td>
+          </tr>
+          <tr>
+            <th>Set Code</th>
+            <td>{{ deckDetails.card.setCode }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <button class="btn btn-secondary m-2" (click)="closeDetailsView()">Fechar Detalhes</button>
+  <button class="btn btn-success" (click)="addToDeck()">Adicionar</button>
+
+</div>
